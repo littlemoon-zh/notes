@@ -11,7 +11,7 @@ Python:
   - collections.Counter (created at: Jun 20, 2021)
 
 Linux:
-- [hohup](https://github.com/littlemoon-zh/notes/issues/5) (created at: Jun 17, 2021)
+- [nohup](https://github.com/littlemoon-zh/notes/issues/5) (created at: Jun 17, 2021)
 
 Other:
 - [remove entry from singly linked list(C)](https://github.com/littlemoon-zh/notes/issues/4) (created at: Jun 16, 2021)
