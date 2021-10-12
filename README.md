@@ -1,8 +1,8 @@
 # notes
 
-Algorithm problems:
+Algorithm:
 - [median](https://github.com/littlemoon-zh/notes/issues/1) (created at: Jun 6, 2021)
-- [quick sort partition](sort/quickSort.md)
+- [quick sort partition](algorithm/sort/quickSort.md)
 
 Python:
 - [decorator](https://github.com/littlemoon-zh/notes/issues/2) (created at: Jun 6, 2021)
