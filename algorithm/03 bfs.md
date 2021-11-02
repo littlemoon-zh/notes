@@ -10,3 +10,7 @@
 
 [1162. As Far from Land as Possible](https://leetcode.com/problems/as-far-from-land-as-possible/)
 
+
+## 广义图(心中有图)
+
+[752. Open the Lock](https://leetcode.com/problems/open-the-lock/)
