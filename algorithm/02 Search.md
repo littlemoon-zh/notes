@@ -1,13 +1,11 @@
-# classic search and backtracking problem
+# classic search and backtracking problem(using DFS)
 
+搜索问题，是最重要、最基础、变化最多的算法。比较原始且高效的方法就是用dfs或bfs在搜索空间上挨个尝试，很多算法问题本质上都是搜索问题，只不过未必显式使用dfs或者bfs。
 
-搜索问题，通常可以用dfs/bfs来解决，而且大多数情况下，两种方法都可以适用。dfs用递归实现的多一些，而bfs几乎只用队列来实现。
-
+- 搜索问题，通常可以用dfs/bfs来解决，而且大多数情况下，两种方法都可以适用。dfs用递归实现的多一些，而bfs几乎只用队列来实现。
 - dfs用于找出符合规定的解，bfs通常还可以找出**最值问题**，比如路径权重为1时，最短路径问题就退化成bfs问题。因为bfs是从近到远一次遍历，所以当它访问到某个位置，一定是距离原点最近的可达位置。
-
 - 在很多搜索问题中，为了重复访问某个位置，会使用一个辅助结构来记录是否访问过某个位置，比如一个数组，或者set。很多情况，在回溯时，要清除当前这一步对这个辅助结构的影响，否则得不到正确的答案。
 不过有时候，不需要清除。比如你想知道是否有一条路径可以通向终点，那么这里dfs就不需要清除路径，因为这只是一个存在性问题，你并不想知道所有路径。
-
 - 关于返回值，有时候dfs返回值可以设置成True或False，表示是否找到解，这样一来，在找到答案后就不需要进行后续的搜索。
 
 - 对于难一点的题目，dfs可能只是其中一个验证的步骤，比如用于二分中，对mid值进行一些验证；又或者dfs中验证某一步是否valid的函数比较复杂；
@@ -34,6 +32,13 @@
 所以这题是比较高级的bfs，首先把所有的0入队列，因为他们距离0的距离是0，接着0的周围的所有没遍历过的节点入队，它们到0的距离必然是1，下面再重复这个过程，就一次得到距离为2，3，4...的所有点。
 
 这里使用bfs+visited可以保证，对整个图只遍历一次，但是使用逐点bfs就会大大增加搜索次数，假设一个图里面只有一个点是0，那么远离这个0的点进行bfs时就相当于遍历整个图。
+
+
+## [698. Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
+
+非常好的一个题。虽然是搜索题，但是找到如何搜索，如何高效搜索还是比较困难的。比如有时候从目标出发向起点搜索比较好，有时候从起点向终点扩张比较好，要灵活选用。
+
+这题搜索的方向是，能满足一个先满足一个，满足这一个再看下一个。我原本的是搜索方法是，把这些数先挨个分给这些k个子数组，不满足的时候再进行回溯，也就是我同时搜索了多个。这可能是我速度很慢的原因。
 
 
 ## [778 Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) 二分+搜索
@@ -82,46 +87,5 @@ class Solution:
 
 ## [52 N-Queens II](https://leetcode.com/problems/n-queens-ii/)
 
-经典N皇后问题，没什么可说的，相对来讲比较常规，判断是否valid也比较直观。
+经典N皇后问题，没什么可说的，相对来讲比较常规，判断是否valid也比较直观。因为每行只能放一个数，所以可以在每一行的几个列中选取一个位置，如果可以放，就继续到下一行进行递归，直到最后一行。
 
-```python
-class Solution:
-    def totalNQueens(self, n: int) -> int:
-        if n == 1: return 1
-        B = [[0] * n for i in range(n)]
-        self.res = 0
-        
-        def isValid(x, y):
-            for i in range(n):
-                if B[x][i] == 1 or B[i][y] == 1:
-                    return False
-
-            xx, yy = x, y
-            while xx >= 0 and yy >= 0:
-                if B[xx][yy] == 1: return False
-                xx -= 1
-                yy -= 1
-            xx, yy = x, y
-            while xx >= 0 and yy < n:
-                if B[xx][yy] == 1: return False
-                xx -= 1
-                yy += 1
-            
-            return True
-        
-        def dfs(level):
-            for i in range(n):
-                if isValid(level, i):
-                    if level == n - 1:
-                        self.res += 1
-                        return
-                    B[level][i] = 1
-                    dfs(level + 1)
-                    B[level][i] = 0
-
-        for i in range(n):
-            B[0][i] = 1
-            dfs(1)
-            B[0][i] = 0
-        return self.res
-```
