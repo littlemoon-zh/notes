@@ -85,6 +85,10 @@ class Solution:
         return lo
 ```
 
+## [980. Unique Paths III](https://leetcode.com/problems/unique-paths-iii/)
+
+也是一个路径搜索问题，dfs+回溯可以解决。
+
 ## [52 N-Queens II](https://leetcode.com/problems/n-queens-ii/)
 
 经典N皇后问题，没什么可说的，相对来讲比较常规，判断是否valid也比较直观。因为每行只能放一个数，所以可以在每一行的几个列中选取一个位置，如果可以放，就继续到下一行进行递归，直到最后一行。
