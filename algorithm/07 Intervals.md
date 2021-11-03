@@ -7,11 +7,11 @@
 - 画图最好理解；
 
 
-[252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)
+## [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)
 
 思路：sorting + intersection判断
 
-[253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+## [253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
 
 思路：sorting + heap + 计算同时有几个区间intersection
 
@@ -31,19 +31,19 @@ class Solution:
         return res
 ```
 
-[763. Partition Labels](https://leetcode.com/problems/partition-labels/)
+## [763. Partition Labels](https://leetcode.com/problems/partition-labels/)
 
 思路：hash + intersection，这题可以看成区间问题，也可以看成是贪心的策略，或者双指针；
 
-[56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+## [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
 思路：sorting + Union
 
-[57. Insert Interval](https://leetcode.com/problems/insert-interval/)
+## [57. Insert Interval](https://leetcode.com/problems/insert-interval/)
 
 问题转化：step1 有序序列插入问题，可以使用二分确定插入位置；step2 转换成merge intervals问题；
 
-[495. Teemo Attacking](https://leetcode.com/problems/teemo-attacking/)
+## [495. Teemo Attacking](https://leetcode.com/problems/teemo-attacking/)
 
 思路：扩展区间的问题
 
