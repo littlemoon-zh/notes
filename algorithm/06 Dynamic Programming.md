@@ -8,6 +8,26 @@
 - 转换为bottom-up的dp
 
 
+## 背包问题
+
+[416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
+
+问题转换，就是看是否可以从数组中取一些数，它们的和是`sum/2`，这就变成了01背包问题。
+
+优化：一维数组优化，从后往前。
+
+参考：背包问题九讲。
+
+```
+ZeroOne(cost, weight):
+  for v = V..cost:
+    f[v] = max(f[v], f[v-cost] + weight)
+
+for i in n:
+  ZeroOne(cost[i], weight[i])
+```
+
+
 ## 区间dp
 
 ```
@@ -18,6 +38,9 @@ dp[i,j] = f(dp[i,k], dp[k+1,j]) + cost
 
 
 [471. Encode String with Shortest Length](https://leetcode.com/problems/encode-string-with-shortest-length/) 和它的逆问题 [394. Decode String](https://leetcode.com/problems/decode-string/)
+
+
+
 
 
 ## 二维dp
