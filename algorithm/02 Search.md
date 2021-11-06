@@ -93,3 +93,24 @@ class Solution:
 
 经典N皇后问题，没什么可说的，相对来讲比较常规，判断是否valid也比较直观。因为每行只能放一个数，所以可以在每一行的几个列中选取一个位置，如果可以放，就继续到下一行进行递归，直到最后一行。
 
+## [140. Word Break II](https://leetcode.com/problems/word-break-ii/)
+
+Not bad. Compared with dynamic programming one: [139. Word Break](https://leetcode.com/problems/word-break/)
+
+DP vs Search for these two problems:
+- DP has much more data input, i.e. n=300, while search only has n=20.
+- Search requires all the possible solution, DP requires the existence.
+
+```python
+def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+    res = []
+    def dfs(s, path):
+        if s == '':
+            res.append(' '.join(path))
+            return
+        for i in range(len(s) + 1):
+            if s[:i] in wordDict:
+                dfs(s[i:], path + [s[:i]])
+    dfs(s, [])
+    return res
+```
