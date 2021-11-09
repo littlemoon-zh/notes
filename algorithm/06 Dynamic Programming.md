@@ -27,6 +27,30 @@ for i in n:
   ZeroOne(cost[i], weight[i])
 ```
 
+[494. Target Sum](https://leetcode.com/problems/target-sum/)
+
+这题也是个背包问题，只不过比上面的更难发现，更难想到变形：
+
+```
+positive + negative = target
+positive - negative = total
+-->
+postive = (target + total) / 2
+```
+
+不过直接递归做，使用备忘录也是可以的，很好想，转换成类似在二叉树进行搜索，每步有两个选择，+当前或者-当前，或许从这里也可以看出是背包问题，因为有两种选择，所以很类似于01背包。
+
+```python
+def findTargetSumWays(self, nums: List[int], target: int) -> int:
+    memo = {} 
+    def dfs(i, cur):
+        if (i, cur) in memo: return memo[i, cur]
+        if i == len(nums): return 1 if cur == target else 0
+
+        res = dfs(i + 1, cur + nums[i]) + dfs(i + 1, cur - nums[i])
+        memo[i, cur] = res
+        return res
+```
 
 ## 区间dp
 
