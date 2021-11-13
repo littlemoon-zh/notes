@@ -5,6 +5,7 @@
 - 还会涉及到集合的Union Intersection Difference等操作；
 - 要关注区间的开闭；
 - 画图最好理解；
+- 贪心策略在区间题中还挺常用的
 
 
 ## [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)
@@ -63,3 +64,12 @@ class Solution:
                 right = start + duration - 1
         return res
 ```
+
+## [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+
+If we sort by the start, then:
+```
+[1, 100], [2,3], [3,4], [4,5], [10,20], [20, 24]
+```
+
+In this case, it's obviously wrong! Sort by the end so that current interval has no impact on intervals behind.
