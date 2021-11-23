@@ -1,6 +1,6 @@
 # 逆向思维
 
-
+---
 [828. Count Unique Characters of All Substrings of a Given String](https://leetcode.com/problems/count-unique-characters-of-all-substrings-of-a-given-string/)
 
 [ref solution](https://leetcode.com/problems/count-unique-characters-of-all-substrings-of-a-given-string/discuss/128952/C%2B%2BJavaPython-One-pass-O(N))
@@ -18,3 +18,8 @@ def uniqueLetterString(self, s: str) -> int:
         res += (len(s) - b) * (b - a)
     return res
 ```
+
+---
+[401. Binary Watch](https://leetcode.com/problems/binary-watch/)
+
+可以使用dfs来搜索，但是更简单的方法是从结果出发，把所有可能方案列出来，看哪些符合条件。因为搜索空间比较小，所以这样做比较快。
