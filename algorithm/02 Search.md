@@ -114,3 +114,17 @@ def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
     dfs(s, [])
     return res
 ```
+
+## [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
+
+Not bad. Complete bag.
+
+```python
+def dfs(start, cur, path):
+    # some code here
+    
+    # keep using the current
+    dfs(start, cur + nums[start], path + [nums[start]])
+    # then the next
+    dfs(start + 1, cur, path)
+```
