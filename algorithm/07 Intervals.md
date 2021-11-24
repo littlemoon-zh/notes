@@ -73,3 +73,9 @@ If we sort by the start, then:
 ```
 
 In this case, it's obviously wrong! Sort by the end so that current interval has no impact on intervals behind.
+
+## [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
+
+总体思路类似于merger two sorted array，用两个指针。
+
+
