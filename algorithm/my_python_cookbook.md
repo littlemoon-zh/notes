@@ -7,6 +7,7 @@
 - `ord` and `chr`, `ord('a') = 95`, `chr(95) = 'a'`
 - `round()` round to nearest int
 - `min` `max` `sum`
+- `int('1010', base=2)`, `int('1010', 2)`, `36 >= base >= 2`
 
 ## math module
 
