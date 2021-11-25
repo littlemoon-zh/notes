@@ -29,3 +29,14 @@ bisect.bisect_left(arr, x, lo, hi)
 # 返回第一个大于x的位置 也就是有序数组中的插入位置
 bisect.bisect_right(arr, x, lo, hi)
 ```
+
+
+## 奇技淫巧
+
+- 求Transpose:
+```python
+A = [[1,2], [3,4]]
+
+tA = zip(*A)
+# tA = [[1,3], [2,4]]
+```
