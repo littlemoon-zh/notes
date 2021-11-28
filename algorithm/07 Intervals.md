@@ -8,11 +8,11 @@
 - 贪心策略在区间题中还挺常用的
 
 
-## [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)
+[252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)
 
 思路：sorting + intersection判断
 
-## [253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+[253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
 
 思路：sorting + heap + 计算同时有几个区间intersection
 
@@ -32,7 +32,7 @@ class Solution:
         return res
 ```
 
-## [763. Partition Labels](https://leetcode.com/problems/partition-labels/)
+[763. Partition Labels](https://leetcode.com/problems/partition-labels/)
 
 思路：hash + intersection，这题可以看成区间问题，也可以看成是贪心的策略，或者双指针；
 
@@ -44,7 +44,7 @@ class Solution:
 
 问题转化：step1 有序序列插入问题，可以使用二分确定插入位置；step2 转换成merge intervals问题；
 
-## [495. Teemo Attacking](https://leetcode.com/problems/teemo-attacking/)
+[495. Teemo Attacking](https://leetcode.com/problems/teemo-attacking/)
 
 思路：扩展区间的问题
 
@@ -65,7 +65,7 @@ class Solution:
         return res
 ```
 
-## [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+[435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 
 If we sort by the start, then:
 ```
@@ -79,3 +79,8 @@ In this case, it's obviously wrong! Sort by the end so that current interval has
 总体思路类似于merger two sorted array，用两个指针。
 
 
+## 贪心 + 区间
+
+[1024. Video Stitching](https://leetcode.com/problems/video-stitching/)
+
+在可行区域内，找到右端点最远的。
