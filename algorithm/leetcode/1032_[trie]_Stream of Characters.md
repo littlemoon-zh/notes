@@ -1,5 +1,5 @@
 
-Trie
+Trie 注意是后缀 所以判断和插入要逆序。
 
 ```python
 class StreamChecker:
