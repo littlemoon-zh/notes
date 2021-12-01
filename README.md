@@ -1,6 +1,8 @@
 # notes
 
+
 Algorithm:
+- [Leetcode Solution](algorithm/leetcode/) (continuously updating)
 - [median](https://github.com/littlemoon-zh/notes/issues/1) (created at: Jun 6, 2021)
 - [quick sort partition](algorithm/sort/quickSort.md)
 - [trial and error method with binary search](algorithm/trial_and_error_with_binary_search.md)
