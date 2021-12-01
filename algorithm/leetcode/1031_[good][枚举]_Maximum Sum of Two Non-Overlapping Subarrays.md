@@ -1,4 +1,6 @@
 
+前缀和 + 枚举
+
 
 ```python
 class Solution:
