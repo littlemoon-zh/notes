@@ -31,6 +31,7 @@ class Solution:
 
 ## 426 Convert Binary Search Tree to Sorted Doubly Linked List
 
+这个不是一个通用的解法，但是特别好。
 
 ```java
 class Solution {
